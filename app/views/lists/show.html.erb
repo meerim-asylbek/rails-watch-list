@@ -1,6 +1,7 @@
 <h1><%= @list.name %></h1>
 <%= link_to "Home", lists_path %>
 <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+<%= cl_image_tag @list.picture.key, height: 300, width: 400, crop: :fill %>
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
   <li>
