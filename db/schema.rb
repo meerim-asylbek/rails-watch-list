@@ -41,6 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_185450) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
+
   create_table "bookmarks", force: :cascade do |t|
     t.text "comment"
     t.bigint "movie_id", null: false
