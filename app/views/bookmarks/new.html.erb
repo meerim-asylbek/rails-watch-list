@@ -1,8 +1,17 @@
-<h1>Add a new film</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-<%= f.association :movie %>
-<%= f.input :comment %>
-<%= f.submit %>
-<% end %>
+<%= render "shared/navbar" %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h1>Add a new film</h1>
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.association :movie %>
+        <%= f.input :comment %>
+        <%= f.submit %>
+        <% end %>
 
-<%= link_to "Back to the list", list_path(@list) %>
+        <%= link_to "Back to the list", list_path(@list) %>
+      </div>
+    </div>
+  </div>
+</div>
